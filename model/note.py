@@ -26,3 +26,14 @@ class Note:
 
     def set_date(self):
         self._date = datetime.datetime.now()
+
+    def set_date_time(self, date_time):
+        self._date = date_time
+
+    def get_dict(self):
+        note_dict = dict()
+        note_dict["id"] = self._number
+        note_dict["header"] = self._header
+        note_dict["body"] = self._body
+        note_dict["date"] = self._date.strftime('%d/%m/%Y %H:%M:%S')
+        return note_dict
