@@ -28,7 +28,7 @@ class Service:
 
     def save_json(self, file_name):
         with open(f'{file_name}', 'w') as outfile:
-            json.dump(self._notebook.get_dict(), outfile)
+            json.dump(self._notebook.get_dict(), outfile, indent=4)
 
     def load_json(self, file_name):
         with open(f'{file_name}') as json_file:
