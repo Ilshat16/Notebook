@@ -22,3 +22,6 @@ class Presenter:
 
     def load_json(self, file_name):
         self._service.load_json(file_name)
+
+    def selection_by_date(self, date):
+        return self._service.selection_by_date(date)

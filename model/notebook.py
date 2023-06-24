@@ -27,3 +27,6 @@ class Notebook:
         for i in range(len(self._note_list)):
             note_dict[i] = self._note_list[i].get_dict()
         return note_dict
+
+    def get_notebook(self):
+        return self._note_list

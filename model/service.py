@@ -57,3 +57,15 @@ class Service:
         min = int(time_list[1])
         sec = int(time_list[2])
         return datetime.datetime(year, month, day, hour, min, sec)
+
+    def selection_by_date(self, date):
+        selection_result = Notebook()
+        count = 0
+        for note in self._notebook.get_notebook():
+            if note.get_date() == date:
+                count += 1
+                note.set_id(count)
+                selection_result.add_note(note)
+        self.save_json("temp")
+        return selection_result
+

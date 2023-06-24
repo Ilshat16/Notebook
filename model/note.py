@@ -37,3 +37,6 @@ class Note:
         note_dict["body"] = self._body
         note_dict["date"] = self._date.strftime('%d/%m/%Y %H:%M:%S')
         return note_dict
+
+    def get_date(self):
+        return self._date.strftime("%d/%m/%Y")
