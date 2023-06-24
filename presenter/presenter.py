@@ -10,3 +10,12 @@ class Presenter:
 
     def get_info(self):
         return self._service.get_info()
+
+    def get_notebook_length(self):
+        return self._service.get_notebook_length()
+
+    def save_json(self, file_name):
+        self._service.save_json(file_name)
+
+    def load_json(self, file_name):
+        self._service.load_json(file_name)

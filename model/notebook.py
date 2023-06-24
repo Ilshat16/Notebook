@@ -13,3 +13,12 @@ class Notebook:
 
     def insert_note(self, id_, note):
         self._note_list.insert(id_, note)
+
+    def get_notebook_length(self):
+        return len(self._note_list)
+
+    def get_dict(self):
+        note_dict = dict()
+        for i in range(len(self._note_list)):
+            note_dict[i] = self._note_list[i].get_dict()
+        return note_dict
