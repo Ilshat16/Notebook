@@ -8,6 +8,9 @@ class Presenter:
     def change_note(self, id_, header, body):
         self._service.change_note(id_, header, body)
 
+    def del_note(self, id_):
+        self._service.del_note(id_)
+
     def get_info(self):
         return self._service.get_info()
 
