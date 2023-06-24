@@ -20,6 +20,10 @@ class Service:
         note.set_date()
         self._notebook.insert_note(id_ - 1, note)
 
+    def del_note(self, id_):
+        self._notebook.del_note(id_)
+
+
     def get_info(self):
         return self._notebook
 
@@ -53,5 +57,3 @@ class Service:
         min = int(time_list[1])
         sec = int(time_list[2])
         return datetime.datetime(year, month, day, hour, min, sec)
-
-

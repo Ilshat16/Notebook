@@ -1,5 +1,6 @@
 from ui.commands.add_note import Add_note
 from ui.commands.change_note import Change_note
+from ui.commands.del_note import Del_note
 from ui.commands.finish import Finish
 from ui.commands.get_info import Get_info
 from ui.commands.load_json import Load_json
@@ -11,6 +12,7 @@ class Menu:
         self._menu = list()
         self._menu.append(Add_note(view))
         self._menu.append(Change_note(view))
+        self._menu.append(Del_note(view))
         self._menu.append(Get_info(view))
         self._menu.append(Save_json(view))
         self._menu.append(Load_json(view))

@@ -11,6 +11,11 @@ class Notebook:
     def pop_note(self, id_):
         return self._note_list.pop(id_)
 
+    def del_note(self, id_):
+        self.pop_note(id_ - 1)
+        for i in range(id_ - 1, len(self._note_list)):
+            self._note_list[i].set_id(i + 1)
+
     def insert_note(self, id_, note):
         self._note_list.insert(id_, note)
 

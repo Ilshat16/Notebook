@@ -28,6 +28,10 @@ class Console:
         body = input("Введите измененный текст заметки: ")
         self._presenter.change_note(id_, header, body)
 
+    def del_note(self):
+        id_ = self.input_note_id()
+        self._presenter.del_note(id_)
+
     def get_info(self):
         print(self._presenter.get_info())
 
