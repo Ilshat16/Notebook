@@ -33,6 +33,7 @@ class Console:
         self._presenter.del_note(id_)
 
     def get_info(self):
+        print("Ваши заметки:")
         print(self._presenter.get_info())
 
     def finish(self):
@@ -62,6 +63,12 @@ class Console:
             else:
                 error = False
         return id_
+
+    def selection_by_date(self):
+        date = input("Введите дату в формате день/месяц/год: ")
+        result = self._presenter.selection_by_date(date)
+        print("Обнаружены следующие записи: ")
+        print(result)
 
     def save_json(self):
         file_name = input("Введите название сохраняемого файла: ")

@@ -5,6 +5,7 @@ from ui.commands.finish import Finish
 from ui.commands.get_info import Get_info
 from ui.commands.load_json import Load_json
 from ui.commands.save_json import Save_json
+from ui.commands.selection_by_date import Selection_by_date
 
 
 class Menu:
@@ -14,6 +15,7 @@ class Menu:
         self._menu.append(Change_note(view))
         self._menu.append(Del_note(view))
         self._menu.append(Get_info(view))
+        self._menu.append(Selection_by_date(view))
         self._menu.append(Save_json(view))
         self._menu.append(Load_json(view))
         self._menu.append(Finish(view))
